@@ -20,13 +20,13 @@ This project integrates real-time emotion recognition using deep learning (CNN/R
 Emotion-aware applications can power the next generation of human-computer interaction. This project combines computer vision, deep learning, and music information retrieval to develop a system that recognizes emotions and responds with music.
 
 ### 🛠️ Tech Stack
-**Category	      Tools/Libraries**
-* Backend	            Python, Flask
-* Frontend	          HTML5, CSS3, Bootstrap
-* Machine Learning	  TensorFlow 2.15, Keras 3.3.3, OpenCV, NumPy
-* Model	              Custom CNN & ResNet50V2 (transfer learning)
-* Dataset	            FER2013 (emotion recognition), custom CSVs for music
-* Deployment	        Localhost (Flask) / Ready for Docker/Cloud Hosting
+**Category	---->      Tools/Libraries**
+* Backend	---->            Python, Flask
+* Frontend	---->          HTML5, CSS3, Bootstrap
+* Machine Learning	---->  TensorFlow 2.15, Keras 3.3.3, OpenCV, NumPy
+* Model	---->              Custom CNN & ResNet50V2 (transfer learning)
+* Dataset	   ---->         FER2013 (emotion recognition), custom CSVs for music
+* Deployment	    ---->    Localhost (Flask) / Ready for Docker/Cloud Hosting
 
 
 

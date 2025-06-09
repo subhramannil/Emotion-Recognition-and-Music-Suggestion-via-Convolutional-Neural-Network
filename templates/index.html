@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion-Based Music Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 Emotion-Based Music Recommender 🎶</h1>
+            <div class="emotion-display">Current Emotion: {{ emotion }}</div>
+        </header>
+
+        <div class="content">
+            <div class="camera-section">
+                <h2>Real-Time Emotion Detection</h2>
+                <img src="{{ url_for('video_feed') }}" width="480" height="360">
+            </div>
+
+            <div class="recommendations">
+                <h2>Recommended Songs</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            {% for heading in headings %}
+                            <th>{{ heading }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in data %}
+                        <tr>
+                            <td>{{ row['Name'] }}</td>
+                            <td>{{ row['Album'] }}</td>
+                            <td>{{ row['Artist'] }}</td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="3" style="text-align: center; padding: 20px;">
+                                No recommendations found for {{ emotion }}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="footer">
+            Powered by DeepSeek-R1 | Emotion AI Music System
+        </div>
+    </div>
+
+    <!-- 🔁 Auto-refresh emotion and songs -->
+    <script>
+        function updateEmotionAndSongs() {
+            fetch('/emotion_data')
+                .then(response => response.json())
+                .then(data => {
+                    document.querySelector('.emotion-display').innerText = "Current Emotion: " + data.emotion;
+
+                    const tableBody = document.querySelector("table tbody");
+                    tableBody.innerHTML = ""; // Clear old data
+
+                    if (data.songs.length === 0) {
+                        const row = document.createElement("tr");
+                        const cell = document.createElement("td");
+                        cell.colSpan = 3;
+                        cell.innerText = `No recommendations found for ${data.emotion}`;
+                        cell.style.textAlign = "center";
+                        cell.style.padding = "20px";
+                        row.appendChild(cell);
+                        tableBody.appendChild(row);
+                    } else {
+                        data.songs.forEach(song => {
+                            const row = document.createElement("tr");
+                            row.innerHTML = `
+                                <td>${song.Name}</td>
+                                <td>${song.Album}</td>
+                                <td>${song.Artist}</td>
+                            `;
+                            tableBody.appendChild(row);
+                        });
+                    }
+                });
+        }
+
+        setInterval(updateEmotionAndSongs, 5000); // Fetch every 5 seconds
+        window.onload = updateEmotionAndSongs;
+    </script>
+</body>
+</html>

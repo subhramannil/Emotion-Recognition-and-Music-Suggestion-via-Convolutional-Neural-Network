@@ -1,5 +1,5 @@
-# 🌟 Affective Computing Deep Learning Framework
-# 🎭 Emotion Recognition and 🎶 Music Suggestion via Convolutional Neural Network (CNN)
+## 🌟 Affective Computing Deep Learning Framework
+## 🎭 Emotion Recognition and 🎶 Music Suggestion via Convolutional Neural Network (CNN)
 ## 📌 Project Overview
 This project integrates real-time emotion recognition using deep learning (CNN/ResNet50V2) and provides personalized music recommendations based on the detected emotion. The goal is to build an affective computing framework that responds to a user's emotional state using a webcam and recommends appropriate songs from predefined datasets.
 

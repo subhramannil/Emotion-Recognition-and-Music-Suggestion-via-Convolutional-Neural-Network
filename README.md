@@ -4,17 +4,17 @@
 This project integrates real-time emotion recognition using deep learning (CNN/ResNet50V2) and provides personalized music recommendations based on the detected emotion. The goal is to build an affective computing framework that responds to a user's emotional state using a webcam and recommends appropriate songs from predefined datasets.
 
 ### 🧠 Core Features
-🎥 **Real-Time Emotion Detection** via webcam using CNN (custom/resnet50v2).
+* 🎥 **Real-Time Emotion Detection** via webcam using CNN (custom/resnet50v2).
 
-😃 Emotion classes: **Angry, Disgusted, Fearful, Happy, Neutral, Sad, Surprised.**
+* 😃 Emotion classes: **Angry, Disgusted, Fearful, Happy, Neutral, Sad, Surprised.**
 
-🎵 **Dynamic Song Recommendations** from emotion-based CSV song datasets.
+* 🎵 **Dynamic Song Recommendations** from emotion-based CSV song datasets.
 
-🧩 **Flask Web App** with live video stream + responsive UI (HTML, CSS, Bootstrap).
+* 🧩 **Flask Web App** with live video stream + responsive UI (HTML, CSS, Bootstrap).
 
-🖼️ Facial feature extraction via **Haarcascade + Keras/TensorFlow prediction.**
+* 🖼️ Facial feature extraction via **Haarcascade + Keras/TensorFlow prediction.**
 
-📊 Fully trained models using the **FER2013 dataset.**
+* 📊 Fully trained models using the **FER2013 dataset.**
 
 ### 💡 Project Motivation
 Emotion-aware applications can power the next generation of human-computer interaction. This project combines computer vision, deep learning, and music information retrieval to develop a system that recognizes emotions and responds with music.

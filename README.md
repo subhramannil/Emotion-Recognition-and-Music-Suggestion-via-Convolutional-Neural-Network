@@ -21,15 +21,14 @@ Emotion-aware applications can power the next generation of human-computer inter
 
 ### 🛠️ Tech Stack
 **Category	      Tools/Libraries**
-Backend	            Python, Flask
-Frontend	          HTML5, CSS3, Bootstrap
-Machine Learning	  TensorFlow 2.15, Keras 3.3.3, OpenCV, NumPy
-Model	              Custom CNN & ResNet50V2 (transfer learning)
-Dataset	            FER2013 (emotion recognition), custom CSVs for music
-Deployment	        Localhost (Flask) / Ready for Docker/Cloud Hosting
+* Backend	            Python, Flask
+* Frontend	          HTML5, CSS3, Bootstrap
+* Machine Learning	  TensorFlow 2.15, Keras 3.3.3, OpenCV, NumPy
+* Model	              Custom CNN & ResNet50V2 (transfer learning)
+* Dataset	            FER2013 (emotion recognition), custom CSVs for music
+* Deployment	        Localhost (Flask) / Ready for Docker/Cloud Hosting
 
-### 📂 Project Structure
-<pre><code>📁 my_project/ │ ├── app.py # Flask app entrypoint ├── camera.py # Webcam + Emotion detection logic ├── utils.py # Threaded webcam class ├── Spotipy.py # (Optional) Spotify API handling ├── templates/ │ └── index.html # Main frontend template ├── static/ │ └── style.css # UI styling ├── songs/ │ ├── happy.csv │ ├── sad.csv │ ├── ... ├── model/ │ └── custom_cnn_model.keras # or resnet50_model.keras ├── haarcascade_frontalface_default.xml └── README.md # You're reading this! </code></pre>
+
 
 ### 🧪 How to Run
 ### 1. ✅ Clone this repo:
